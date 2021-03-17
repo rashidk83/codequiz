@@ -204,6 +204,7 @@ function replayQuiz(){
     currentQuestionIndex = 0;
 }
 
+
 // This function checks the response to each answer 
 function checkAnswer(answer){
     correct = quizQuestions[currentQuestionIndex].correctAnswer;
