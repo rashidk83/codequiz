@@ -181,7 +181,7 @@ function generateHighscores(){
     }
 }
 
-// This function displays the high scores page
+// This function displays the high scores
 function showHighscore(){
     startQuizDiv.style.display = "none"
     gameoverDiv.style.display = "none";
@@ -192,7 +192,7 @@ function showHighscore(){
     generateHighscores();
 }
 
-// This function clears the local storage of the high scores as well as clearing the text from the high score board
+// This function clears the local storage
 function clearScore(){
     window.localStorage.clear();
     highscoreDisplayName.textContent = "";
@@ -219,16 +219,16 @@ function checkAnswer(answer){
         alert("Correct!");
         currentQuestionIndex++;
         generateQuizQuestion();
-        //display in the results div that the answer is correct.
+        //display the answer is correct.
     }else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex){
         alert("Incorrect.")
         currentQuestionIndex++;
         generateQuizQuestion();
-        //display in the results div that the answer is wrong.
+        //display the answer is wrong.
     }else{
         showScore();
     }
 }
 
-// This button starts the quiz!
+// The button to start the quiz!
 startQuizButton.addEventListener("click",startQuiz);
