@@ -24,19 +24,27 @@ var buttonD = document.getElementById("d");
 
 // Questions
 
-var quizQuestions = [{
-    question: "How many elements can you apply an 'ID' attribute to?",
-    choiceA: "As many as you want",
-    choiceB: "3",
-    choiceC: "1",
-    choiceD: "128",
+var quizQuestions = [
+    {
+    question: "What does WWW stand for?",
+    choiceA: "Web World Workings",
+    choiceB: "Weak Winter Weather",
+    choiceC: "World Wide Web",
+    choiceD: "Who Wants Waffles",
+    correctAnswer: "c"},    
+    {
+    question: "What is computer coding?",
+    choiceA: "A radio show",
+    choiceB: "a list of functions",
+    choiceC: "telling a computer what to do",
+    choiceD: "creating games",
     correctAnswer: "c"},
-  {
-    question: "What does DOM stand for?",
-    choiceA: "Document Object Model",
-    choiceB: "Display Object Management",
-    choiceC: "Digital Ordinance Model",
-    choiceD: "Desktop Oriented Mode",
+   {
+    question: "What word describes the set of instructions that computers need to work?",
+    choiceA: "Program",
+    choiceB: "Synopsis",
+    choiceC: "Blueprint",
+    choiceD: "Agenda",
     correctAnswer: "a"},
    {
     question: "What is used primarily to add styling to a web page?",
@@ -45,7 +53,14 @@ var quizQuestions = [{
     choiceC: "Python",
     choiceD: "React.js",
     correctAnswer: "b"},
-    {
+   {
+    question: "What HTML attribute references an external JavaScript file?",
+    choiceA: "href",
+    choiceB: "src",
+    choiceC: "class",
+    choiceD: "index",
+    correctAnswer: "b"},
+   {
     question: "What HTML tags are JavaScript code wrapped in?",
     choiceA: "&lt;div&gt;",
     choiceB: "&lt;link&gt;",
@@ -60,27 +75,18 @@ var quizQuestions = [{
     choiceD: "On computer restart",
     correctAnswer: "a"},  
     {
-    question: "What does WWW stand for?",
-    choiceA: "Web World Workings",
-    choiceB: "Weak Winter Wind",
-    choiceC: "World Wide Web",
-    choiceD: "Wendy Wants Waffles",
-    correctAnswer: "c"},
-    {
-    question: "What HTML attribute references an external JavaScript file?",
-    choiceA: "href",
-    choiceB: "src",
-    choiceC: "class",
-    choiceD: "index",
-    correctAnswer: "b"},
-        
-    
+    question: "How many elements can you apply an 'ID' attribute to?",
+    choiceA: "As many as you want",
+    choiceB: "3",
+    choiceC: "1",
+    choiceD: "128",
+    correctAnswer: "c"}, 
     ];
 
 
     var finalQuestionIndex = quizQuestions.length;
     var currentQuestionIndex = 0;
-    var timeLeft = 76;
+    var timeLeft = 50;
     var timerInterval;
     var score = 0;
     var correct;
@@ -133,7 +139,7 @@ function showScore(){
 
 
 // On click of the submit button, we run the function highscore that saves and stringifies the array of high scores already saved in local stoage
-// as well as pushing the new user name and score into the array we are saving in local storage. Then it runs the function to show high scores.
+// The new user name and score are saved in local storage. Then it runs the function to show high scores.
 submitScoreBtn.addEventListener("click", function highscore(){
     
     
@@ -199,7 +205,7 @@ function replayQuiz(){
     highscoreContainer.style.display = "none";
     gameoverDiv.style.display = "none";
     startQuizDiv.style.display = "flex";
-    timeLeft = 76;
+    timeLeft = 50;
     score = 0;
     currentQuestionIndex = 0;
 }
